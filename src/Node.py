@@ -9,7 +9,6 @@ class Node:
         else:
             self.path_cost = cost
     
-    
     def find_initial_cost(self, state:list):
         for row in range(len(self.state)):
                 for column in range(len(self.state[0])):
