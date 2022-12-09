@@ -1,7 +1,8 @@
-import ButterRobot
 import Node
 import Queue
+import ButterRobot
 from Utils import expand
+
 
 def breadth_first_search(problem:ButterRobot):
     node = Node(state=problem.initial_state)
