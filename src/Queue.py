@@ -1,4 +1,4 @@
-import Node
+from Node import Node
 
 class Queue:
     def __init__(self):
@@ -25,5 +25,6 @@ class Queue:
     def is_empty(self):
         if len(self.queue) == 0:
             return True
+        
         else:
             return False

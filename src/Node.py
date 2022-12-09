@@ -7,6 +7,7 @@ class Node:
         self.depth = depth
         if cost == None:
             self.path_cost = self.find_initial_cost(self.state)
+            
         else:
             self.path_cost = cost
     
@@ -22,4 +23,5 @@ class Node:
             if char.isdigit():
                 cost = int(char)
                 break
+            
         return cost

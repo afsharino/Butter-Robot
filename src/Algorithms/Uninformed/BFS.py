@@ -1,6 +1,6 @@
-import Node
-import Queue
-import ButterRobot
+from Node import Node
+from Queue import Queue
+from ButterRobot import ButterRobot
 from Utils import expand
 
 

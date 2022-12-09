@@ -1,5 +1,5 @@
-import Node
-import ButterRobot
+from Node import Node
+from ButterRobot import ButterRobot
 from copy import deepcopy
 
 def expand(problem:ButterRobot, node:Node):

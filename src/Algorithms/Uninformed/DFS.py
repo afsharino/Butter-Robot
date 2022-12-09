@@ -1,6 +1,6 @@
-import Node
-import Stack
-import ButterRobot
+from Node import Node
+from Stack import Stack
+from ButterRobot import ButterRobot
 from Utils import expand
 
 def depth_first_search(problem:ButterRobot):

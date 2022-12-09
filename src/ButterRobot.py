@@ -1,4 +1,4 @@
-import Move
+from Move import Move
 
 class ButterRobot:
     def __init__(self, initial_state:list):
