@@ -1,9 +1,10 @@
 class Node:
-    def __init__(self, state, parent=None, action=None, path='', cost=None):
+    def __init__(self, state, parent=None, action=None, path='',depth=0, cost=None):
         self.state = state
         self.parent = parent
         self.action = action
         self.action_path = path
+        self.depth = depth
         if cost == None:
             self.path_cost = self.find_initial_cost(self.state)
         else:
