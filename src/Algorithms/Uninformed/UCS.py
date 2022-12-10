@@ -1,6 +1,6 @@
-from queue import Queue
 from ButterRobot import ButterRobot
 from Node import Node
+from Queue import Queue
 from Utils import expand
 
 
