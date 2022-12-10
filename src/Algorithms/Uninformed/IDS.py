@@ -26,4 +26,10 @@ def depth_limited_search(problem:ButterRobot,depth):
     return result
             
 def iterative_deeping_search(problem:ButterRobot):
-    pass
+    depth = 0 
+    while True:
+        result=depth_limited_search(problem, depth)
+        
+        if not (result == "cutoff"):
+            return result
+        depth += 1
