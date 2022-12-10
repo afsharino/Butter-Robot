@@ -201,5 +201,8 @@ class ButterRobot:
         elif 'b' in state[result2[0]][result2[1]]:
             return False
         
+        elif len(state[result[0]][result[1]]) == 3:
+            return False
+        
         else:
             return True
