@@ -18,9 +18,6 @@ class Queue:
             return self.queue[0]
         except:
             return
-        
-    def enqueue(self, node:Node):
-        self.queue.append(node)
     
     def is_empty(self):
         if len(self.queue) == 0:
@@ -28,3 +25,27 @@ class Queue:
         
         else:
             return False
+        
+    def ucs_enqueue(self, node:Node):
+        for i in range(len(self.queue)):
+            if node.path_cost < self.queue[i].path_cost:
+                self.queue.insert(i, node)
+                return
+            
+        self.queue.append(node)
+        
+    def bfs_enqueue(self, node:Node):
+        for i in range(len(self.queue)):
+            if node.h_n < self.queue[i].h_n:
+                self.queue.insert(i, node)
+                return
+            
+        self.queue.append(node)
+        
+    def a_star_enqueue(self, node:Node):
+        for i in range(len(self.queue)):
+            if (node.h_n + node.path_cost) < (self.queue[i].h_n + self.queue[i].path_cost):
+                self.queue.insert(i, node)
+                return
+            
+        self.queue.append(node)
