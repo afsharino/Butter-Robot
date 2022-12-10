@@ -4,6 +4,17 @@ from copy import deepcopy
 from ButterRobot import ButterRobot
 
 
+def is_cycle(node: Node):
+        state = node.state
+        
+        while node.parent is not None:
+            if state == node.parent.state:
+                return True
+            
+            node = node.parent
+            
+        return False
+
 def manhatan_distance(b_place:tuple, p_place:tuple):
     x_b, y_b = b_place
     x_p, y_p = p_place
