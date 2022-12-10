@@ -1,5 +1,4 @@
 from Node import Node
-from Utils import heuristic
 from copy import deepcopy
 from ButterRobot import ButterRobot
 

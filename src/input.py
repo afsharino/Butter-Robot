@@ -3,7 +3,7 @@ import time
 def read_input(read_type:int=1) -> list:
     # Read from file
     if read_type == 1:
-        with open("test/input2.txt", 'r') as file:
+        with open("test/input1.txt", 'r') as file:
             input_matrix = file.readlines()
             
         # Extract number of rows and Columns from file

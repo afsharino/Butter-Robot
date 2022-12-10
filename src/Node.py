@@ -1,5 +1,3 @@
-from Utils import manhatan_distance
-
 class Node:
     def __init__(self, state, parent=None, action=None, path='',depth=0, h_n=None, cost=None):
         self.state = state
@@ -50,4 +48,12 @@ class Node:
                     p_places.add((row,column))
         b_places = list(b_places)
         p_places = list(p_places)
-        return sum([manhatan_distance(b_places[index], p_places[index]) for index in range(len(b_places))])
+        
+        sum_ = 0
+        for index in range(len(b_places)):
+            x_b, y_b = b_places[index]
+            x_p, y_p = p_places[index]
+            manhatan = (abs(x_p - x_b) + abs(y_p - y_b))
+            sum_ += manhatan
+            
+        return sum_
