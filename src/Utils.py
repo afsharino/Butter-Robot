@@ -2,6 +2,21 @@ from Node import Node
 from Utils import heuristic
 from copy import deepcopy
 from ButterRobot import ButterRobot
+
+
+def manhatan_distance(b_place:tuple, p_place:tuple):
+    x_b, y_b = b_place
+    x_p, y_p = p_place
+    return (abs(x_p - x_b) + abs(y_p - y_b))
+
+
+def heuristic(problem:ButterRobot, state:list):
+    b_places = list(problem.find_butter_places(state))
+    p_places = list(problem.find_target_places(state))
+    
+    return sum([manhatan_distance(b_places[index], p_places[index]) for index in range(len(b_places))])
+        
+
 def expand(problem:ButterRobot, node:Node):
     state1 = node.state
     
